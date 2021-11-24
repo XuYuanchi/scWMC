@@ -5,4 +5,4 @@ run Demo.m
 
 The result is as follows
 
-![result_scWMC](result_scWMC.png)
+![](https://github.com/XuYuanchi/scWMC/blob/main/result_sWMC.png)
