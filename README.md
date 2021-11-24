@@ -5,4 +5,4 @@ run Demo.m
 
 The result is as follows
 
-![](https://github.com/XuYuanchi/scWMC/blob/main/result_sWMC.png) {:height="500px" width="1500px"}
+<img src="https://github.com/XuYuanchi/scWMC/blob/main/result_sWMC.png" height="300" width="1500">
