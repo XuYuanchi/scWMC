@@ -5,4 +5,4 @@ run Demo.m
 
 The result is as follows
 
-<img src="https://github.com/XuYuanchi/scWMC/blob/main/result_sWMC.png" height="300" width="1500">
+<img src="https://github.com/XuYuanchi/scWMC/blob/main/result_sWMC.png" height="300" width="1200">
