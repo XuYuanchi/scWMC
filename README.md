@@ -78,7 +78,7 @@ main sWMC algorithm, there are two parameters in this function
 
 ```
 Ori_P -- gene expression matrix which genes in rows and cells in columns needs to imputation
-Par   -- parameters for scWMC, lam and rho need to adjust according to dropout rate and others don't.
+Par   -- parameters for scWMC, including lam, rho, mu1, mu2 and iter. lam and rho need to adjust according to dropout rate and others don't.
 ```
 ## Calling in R
 ### install R package matlabr
