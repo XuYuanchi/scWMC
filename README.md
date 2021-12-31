@@ -31,7 +31,7 @@ The result is as follows
 data_dropout = load('demo_data.mat');
 ```
 Or you can use function <b>readtable</b> to load CSV/TSV/TXT-formatted raw count matrix with genes in rows and cells in columns. Cell and gene labels aren't necessary.
-### Prepare the parameter for scWMC
+### Prepare the parameters for scWMC
 Set up the parameters used in example
 ```
 Par.lam  = 0.8;
@@ -72,6 +72,34 @@ title('Imputed Data by scWMC')
 axis off
 ```
 ## Main functions
+[impute.m](https://github.com/XuYuanchi/scWMC/blob/main/utils/impute.m)
+
+main sWMC algorithm, there are two parameters in this function
+
 ```
-impute.m
+Ori_P -- gene expression matrix which genes in rows and cells in columns needs to imputation
+Par   -- parameters for scWMC, lam and rho need to adjust according to dropout rate and others don't.
 ```
+## Calling in R
+### install R package matlabr
+You can install the stable version on CRAN:
+```
+install.packages('matlabr', dependencies = TRUE)
+```
+or you can install matlabr from GitHub with:
+```
+# install.packages("remotes")
+remotes::install_github("muschellij2/matlabr")
+```
+### run scWMC in R such as
+```
+library(matlabr)
+run_matlab_script('Demo.m')
+```
+## Contact
+
+* Please feel free to contact Yanchi Su (suyanchi@gmail.com) if you have any questions about the software.
+
+## License
+
+This project is licensed under the MIT License.
