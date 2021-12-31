@@ -7,8 +7,71 @@ leveraging those imperfect prior information to estimate underlying true prior s
 ## Overview
 <img src="https://github.com/XuYuanchi/scWMC/blob/main/model.png" height="600" width="1000">
 
-run Demo.m
+## Installation
+### Requirements
+Our algorithm is implemented using Matlab R2020b.
+### Installation from GitHub
+To clone the repository, run the following from a terminal:
+```
+git clone git://github.com/XuYuanchi/scWMC.git
+```
+
+## Quick start
+There is a simulated datasets in data/demo_data.mat file. There are the true data set, Dropout data set, and the imputed dataset by scWMC.
+
+1. Demo.m -- Shows how to run scWMC.
 
 The result is as follows
 
 <img src="https://github.com/XuYuanchi/scWMC/blob/main/result_sWMC.png" height="300" width="1200">
+
+## Usage
+### load the dropout data, such as:
+```
+data_dropout = load('demo_data.mat');
+```
+Or you can use function <b>readtable</b> to load CSV/TSV/TXT-formatted raw count matrix with genes in rows and cells in columns. Cell and gene labels aren't necessary.
+### Prepare the parameter for scWMC
+Set up the parameters used in example
+```
+Par.lam  = 0.8;
+Par.rho  = 0.8;
+Par.mu1  = 0.00001;
+Par.mu2  = 0.00001;
+Par.iter = 100;
+```
+lam, rho     -- denote the weights reflecting the uncertainty in the prior subspace information, set as <b>dropout rate</b>
+
+mu1, mu2 -- denote the regularization parameters, generally do not need to change
+
+iter         -- denote the number of iteration, generally do not need to change
+### Run scWMC
+```
+## imputation
+dataRecovered        = impute(data_dropout, Par);
+## 
+dataRecovered        = max(dataRecovered, 0);
+index                = find(data_dropout);
+dataRecovered(index) = data_dropout(index);
+```
+### Visualize the results
+```
+gcf = figure(1);
+set(gcf, 'Position', [100, 500, 1200, 300])
+subplot(1,3,1)
+imagesc(log10(data_true+1))
+title('True Data')
+axis off
+subplot(1,3,2)
+imagesc(log10(data_dropout+1))
+title('Drop-out Data')
+axis off
+subplot(1,3,3)
+imagesc(log10(dataRecovered+1))
+title('Imputed Data by scWMC')
+axis off
+```
+## Main functions
+```
+impute.m
+```
