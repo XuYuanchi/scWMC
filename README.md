@@ -85,9 +85,6 @@ The data and codes for reproducing all Figures and Tables in the manuscript of s
 
 https://figshare.com/articles/dataset/sc_WMC_data_code/17809219
 
-https://pan.baidu.com/s/1__KdQuVDOgrGx5fDEe1CLQ
-
-code: abcd
 ## Calling in R
 ### install R package matlabr
 You can install the stable version on CRAN:
