@@ -13,7 +13,7 @@ Our algorithm is implemented using Matlab R2020b.
 ### Installation from GitHub
 To clone the repository, run the following from a terminal:
 ```
-git clone git://github.com/XuYuanchi/scWMC.git
+git clone https://github.com/XuYuanchi/scWMC.git
 ```
 
 ## Quick start
