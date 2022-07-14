@@ -5,6 +5,7 @@ addpath('code/lib/PROPACK','code/utils');
 %% Load the data
 % There are three datasets in the .mat file. There are the true data set,
 % Drop-out data set, and the bulk data set.
+
 load('code/data/demo_data.mat')
 data_sc = data_dropout;
 %% Parameters
