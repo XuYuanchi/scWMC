@@ -85,6 +85,12 @@ The data and codes for reproducing all Figures and Tables in the manuscript of s
 
 https://doi.org/10.5281/zenodo.6825038
 
+simulated datasets can be download from:
+
+https://pan.baidu.com/s/1jY_dWuOwJHOR9A3cocHJng  
+code: abcd
+
+
 ## Calling in R
 ### install R package matlabr
 You can install the stable version on CRAN:
