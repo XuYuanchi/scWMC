@@ -83,7 +83,7 @@ Par   -- parameters for scWMC, including lam, rho, mu1, mu2 and iter. lam and rh
 ## scWMC_Reproducibility
 The data and codes for reproducing all Figures and Tables in the manuscript of scWMC can be download from:
 
-https://doi.org/10.5281/zenodo.6825038
+https://doi.org/10.5281/zenodo.6832477
 
 simulated datasets can be download from:
 
